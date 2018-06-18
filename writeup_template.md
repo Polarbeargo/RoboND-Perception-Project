@@ -55,7 +55,7 @@ You're reading it!
 ![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WHuAv5UtK60/0.jpg)
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
-The k-d tree data structure is used in the Euclidian Clustering algorithm to decrease the computational burden of searching for neighboring points. While other efficient algorithms/data structures for nearest neighbor search exist, PCL's Euclidian Clustering algorithm only supports k-d trees.  
+The k-d tree used in the Euclidian Clustering algorithm to decrease the computational burden of searching for neighboring points. While other efficient algorithms/data structures for nearest neighbor search exist, PCL's Euclidian Clustering algorithm only supports k-d trees.  
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)]
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
@@ -63,18 +63,14 @@ The k-d tree data structure is used in the Euclidian Clustering algorithm to dec
 ![][image2]
 ![][image3]
 ![][image4]
-Here is an example of how to include an image in your writeup.
-
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
 
 ### Pick and Place Setup
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
-
 Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
 ![][image5]
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)
-
+[YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)
+[YAML2](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_2.yaml)
+[YAML3](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_3.yaml)
