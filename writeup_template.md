@@ -71,6 +71,8 @@ The k-d tree used in the Euclidian Clustering algorithm to decrease the computat
 Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
 ![][image5]
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)
-[YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)
-[YAML2](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_2.yaml)
+[YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)   
+
+[YAML2](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_2.yaml)   
+
 [YAML3](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_3.yaml)
