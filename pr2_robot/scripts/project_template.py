@@ -136,7 +136,7 @@ def cluster(point_cloud, white_cloud, cluster_indices):
     detected_objects = []
     for index, pts_list in enumerate(cluster_indices):
         # Grab the points for the cluster
-        pcl_cluster = cloud_objects.extract(pts_list)
+        pcl_cluster = point_cloud.extract(pts_list)
         # convert the cluster from pcl to ROS using helper function
         ros_cluster = pcl_to_ros(pcl_cluster)        
         # Compute the associated feature vector
