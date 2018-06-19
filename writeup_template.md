@@ -74,8 +74,10 @@ ec.set_SearchMethod(tree)
 
 cluster_indices now contains a list of indices for each cluster.    
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/2zBcUSiZX0Tk)  /0.jpg)](https://www.youtube.com/watch?v=zBcUSiZX0Tk)  
+![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)    
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/2zBcUSiZX0Tk/0.jpg)](https://www.youtube.com/watch?v=zBcUSiZX0Tk)    
+
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 ![][image1]
 ![][image2]
