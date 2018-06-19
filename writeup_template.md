@@ -77,6 +77,11 @@ cluster_indices now contains a list of indices for each cluster.
 ![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)    
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
+
+Modify the for loop in 'capture_features.py' from range(5) to range (100), set 'using_hsv=True' and train with supporting Vector Machine(SVM). The process as bellow:  
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jKKeYojWtIA&t=66s/0.jpg)](https://www.youtube.com/watch?v=jKKeYojWtIA&t=66s)     
+
 ![][image1]
 ![][image2]
 ![][image3]
