@@ -55,8 +55,24 @@ You're reading it!
 ![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WHuAv5UtK60/0.jpg)
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
-The k-d tree used in the Euclidian Clustering algorithm to decrease the computational burden of searching for neighboring points. While other efficient algorithms/data structures for nearest neighbor search exist, PCL's Euclidian Clustering algorithm only supports k-d trees.  
+The k-d tree used in the Euclidian Clustering algorithm to decrease the computational burden of searching for neighboring points. In here by construct k-d tree with(line 224-225):
 
+```
+white_cloud = XYZRGB_to_XYZ(cloud_objects)
+tree = white_cloud.make_kdtree()
+```  
+
+then proceed with cluster extraction as follow(line 227-231):
+
+```
+ec = white_cloud.make_EuclideanClusterExtraction()
+ec.set_ClusterTolerance(0.02)
+ec.set_MinClusterSize(50)
+ec.set_MaxClusterSize(1500)
+ec.set_SearchMethod(tree)
+```   
+
+cluster_indices now contains a list of indices for each cluster. 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)]
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 ![][image1]
