@@ -43,16 +43,16 @@ You're reading it!
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 * Downsampled PCL cloud using voxel grid filter with leaf size 0.01m  
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/wr3moRdVGfw/0.jpg)
+![Youtube Demo:](https://img.youtube.com/vi/wr3moRdVGfw/0.jpg)
 * Applied Pass through Filter  
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/vsgVgHVBH_k/0.jpg)
+![Youtube Demo:](https://img.youtube.com/vi/vsgVgHVBH_k/0.jpg)
 * Applied RANSAC plane fitting extracted inliers  
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/VhsuVJ-8mQ0/0.jpg)]
+![Youtube Demo:](https://img.youtube.com/vi/VhsuVJ-8mQ0/0.jpg)]
 * RANSAC plane fitting Extract outlier  
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/WHuAv5UtK60/0.jpg)
+![Youtube Demo:](https://img.youtube.com/vi/WHuAv5UtK60/0.jpg)
 
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
 The k-d tree used in the Euclidian Clustering algorithm to decrease the computational burden of searching for neighboring points. In here by construct k-d tree with(line 224-225):
@@ -74,13 +74,13 @@ ec.set_SearchMethod(tree)
 
 cluster_indices now contains a list of indices for each cluster.    
 
-![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)    
+![Youtube Demo:](https://img.youtube.com/vi/C2lNOTTNEqU/0.jpg)    
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 
 Modify the for loop in 'capture_features.py' from range(5) to range (100), set 'using_hsv=True' and train with supporting Vector Machine(SVM). The process as bellow:  
-
-[![IMAGE ALT TEXT HERE](https://i9.ytimg.com/vi/jKKeYojWtIA/mq3.jpg?sqp=CKzcodkF&rs=AOn4CLAe1xYbBxkXaAGluHkC3sjU2FNMvg)](https://www.youtube.com/watch?v=jKKeYojWtIA&t=66s)     
+Youtube Demo:
+[![Youtube Demo:](https://img.youtube.com/vi/jKKeYojWtIA/0.jpg)](https://www.youtube.com/watch?v=jKKeYojWtIA&t=66s)     
 
 ![][image1]
 ![][image2]
@@ -95,7 +95,7 @@ Spend some time at the end to discuss your code, what techniques you used, what 
 ![][image5]
 Youtube Demo:   
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)   
+[![Youtube Demo:](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)   
 
 [YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)   
 
