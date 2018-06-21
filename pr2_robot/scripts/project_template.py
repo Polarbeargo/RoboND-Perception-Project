@@ -110,7 +110,7 @@ def euclidean_cluster(white_cloud):
     # As well as minimum and maximum cluster size (in points)
     ec.set_ClusterTolerance(0.02)
     ec.set_MinClusterSize(50)
-    ec.set_MaxClusterSize(15000)
+    ec.set_MaxClusterSize(25000)
 
     # Search the k-d tree for clusters
     ec.set_SearchMethod(tree)
@@ -181,7 +181,7 @@ def pcl_callback(pcl_msg):
     filter_axis = 'z'
     passthrough.set_filter_field_name(filter_axis)
     axis_min = 0.6
-    axis_max = 1.1
+    axis_max = 0.9
     passthrough.set_filter_limits(axis_min, axis_max)
     cloud_filtered = passthrough.filter()
     
@@ -222,16 +222,7 @@ def pcl_callback(pcl_msg):
 
     # Euclidean Clustering
     white_cloud = XYZRGB_to_XYZ(cloud_objects)
-    tree = white_cloud.make_kdtree()
-    
-    ec = white_cloud.make_EuclideanClusterExtraction()
-    ec.set_ClusterTolerance(0.02)
-    ec.set_MinClusterSize(50)
-    ec.set_MaxClusterSize(1500)
-    ec.set_SearchMethod(tree)
-
-    # Create Cluster-Mask Point Cloud to visualize each cluster separately
-    cluster_indices = ec.Extract()
+    cluster_indices = euclideanCluster(white_cloud)
     cluster_color = get_color_list(len(cluster_indices))
 
     color_cluster_point_list = []
