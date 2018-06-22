@@ -222,7 +222,7 @@ def pcl_callback(pcl_msg):
 
     # Euclidean Clustering
     white_cloud = XYZRGB_to_XYZ(cloud_objects)
-    cluster_indices = euclideanCluster(white_cloud)
+    cluster_indices = euclidean_cluster(white_cloud)
     cluster_color = get_color_list(len(cluster_indices))
 
     color_cluster_point_list = []
