@@ -24,7 +24,7 @@ from pr2_robot.srv import *
 from rospy_message_converter import message_converter
 import yaml
 
-scene_num = 3
+scene_num = 2
 # Helper function to get surface normals
 
 
@@ -170,7 +170,7 @@ def pcl_callback(pcl_msg):
     
     # Voxel Grid Downsampling
     vox = cloud.make_voxel_grid_filter()
-    LEAF_SIZE = 0.01
+    LEAF_SIZE = 0.005
     vox.set_leaf_size(LEAF_SIZE, LEAF_SIZE, LEAF_SIZE)
     cloud_filtered = vox.filter()
     
@@ -180,17 +180,17 @@ def pcl_callback(pcl_msg):
     passthrough = cloud_filtered.make_passthrough_filter()
     filter_axis = 'z'
     passthrough.set_filter_field_name(filter_axis)
-    axis_min = 0.6
-    axis_max = 2.0
+    axis_min = 0.3
+    axis_max = 5.0
     passthrough.set_filter_limits(axis_min, axis_max)
     cloud_filtered = passthrough.filter()
     
     # 'y' axis' filter
     passthrough = cloud_filtered.make_passthrough_filter()
-    filter_axis = 'y'
+    filter_axis = 'x'
     passthrough.set_filter_field_name(filter_axis)
-    axis_min = -0.45
-    axis_max =  0.45
+    axis_min = 0.34
+    axis_max = 1.0
     passthrough.set_filter_limits(axis_min, axis_max)
     cloud_filtered = passthrough.filter()
     
@@ -200,7 +200,7 @@ def pcl_callback(pcl_msg):
     # Set the number of neighboring points to analyze for any given point
     outlier_filter.set_mean_k(50)
     # Set threshold scale factor
-    x = 1
+    x = 0.5
     # Any point with a mean distance larger than global (mean distance+x*std_dev) will be considered outlier
     outlier_filter.set_std_dev_mul_thresh(x)
     # Finally call the filter function for magic
@@ -210,13 +210,14 @@ def pcl_callback(pcl_msg):
     seg = cloud_filtered.make_segmenter()
     seg.set_model_type(pcl.SACMODEL_PLANE)
     seg.set_method_type(pcl.SAC_RANSAC)
-    max_distance = 0.01
+    max_distance = 0.015
     seg.set_distance_threshold(max_distance)
     inliers, coefficents = seg.segment()
     
     # Extract inliers and outliers
-    cloud_objects = cloud_filtered.extract(inliers, negative=True)
     cloud_table = cloud_filtered.extract(inliers, negative=False)
+    cloud_objects = cloud_filtered.extract(inliers, negative=True)
+    
 
 # Exercise-2 
 
@@ -361,7 +362,7 @@ def pr2_mover(object_list):
 
                 except rospy.ServiceException, e:
                     print "Service call failed: %s"%e
-    send_to_yaml('output_3.yaml', dict_list)
+    send_to_yaml('output_2.yaml', dict_list)
 
 
 if __name__ == '__main__':
