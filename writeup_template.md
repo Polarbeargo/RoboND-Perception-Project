@@ -13,6 +13,8 @@
 [image7]: ./image/12.png
 [image8]: ./image/13.png
 [image9]: ./image/14.png
+[image10]: ./image/16.png
+[image11]: ./image/17.png
 # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.
@@ -104,11 +106,11 @@ Change leaf size to 0.005 and passthrough filter along z and x value in project_
 Youtube Demo:   
 
 [![Youtube Demo:](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)   
-![][image16]
-![][image17]
-![][image13]
+![][image10]
+![][image11]
+![][image8]
 [YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)   
-![][image12]
+![][image7]
 [YAML2](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_2.yaml)   
-![][image14]
+![][image9]
 [YAML3](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_3.yaml)
