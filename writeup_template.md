@@ -9,6 +9,10 @@
 [image3]: ./image/5.png
 [image4]: ./image/6.png
 [image5]: ./image/10.png
+[image6]: ./image/11.png
+[image7]: ./image/12.png
+[image8]: ./image/13.png
+[image9]: ./image/14.png
 # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.
@@ -92,14 +96,19 @@ Youtube Demo:
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
+Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further. 
+
+Change leaf size to 0.005 and passthrough filter along z and x value in project_template.py(line 183-184 and Line 192-193), change for loop in capture_fearture.py to 300 to add new model Feature in training set to 2400.  
+
 ![][image5]
 Youtube Demo:   
 
 [![Youtube Demo:](https://img.youtube.com/vi/20xtnMYcr-s/0.jpg)](https://www.youtube.com/watch?v=20xtnMYcr-s)   
-
+![][image16]
+![][image17]
+![][image13]
 [YAML1](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_1.yaml)   
-
+![][image12]
 [YAML2](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_2.yaml)   
-
+![][image14]
 [YAML3](https://github.com/Polarbeargo/RoboND-Perception-Project/blob/master/output_3.yaml)
