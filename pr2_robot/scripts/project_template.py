@@ -185,7 +185,7 @@ def pcl_callback(pcl_msg):
     passthrough.set_filter_limits(axis_min, axis_max)
     cloud_filtered = passthrough.filter()
     
-    # 'y' axis' filter
+    # 'x' axis' filter
     passthrough = cloud_filtered.make_passthrough_filter()
     filter_axis = 'x'
     passthrough.set_filter_field_name(filter_axis)
@@ -316,8 +316,6 @@ def pr2_mover(object_list):
                 pick_pose.position.y = center_y
                 pick_pose.position.z = center_z
 
-                cent = (center_x, center_y, center_z)
-
                 # get parameters
                 dropbox_param = rospy.get_param('/dropbox')
                 place_pose = Pose()
@@ -328,18 +326,18 @@ def pr2_mover(object_list):
                     # Assign the left arm to be used for pick_place
                     arm_name.data = dropbox_param[0]['name']
 
-                    # TODO: better object drop location tracking to prevent objects from dropping outside the boxes with large picking list.
-                    place_pose.position.x = dropbox_param[0]['position'][0]-0.03 - 0.05 * i
-                    place_pose.position.y = dropbox_param[0]['position'][1] + 0.03 * i
+                    # TODO: object drop location.
+                    place_pose.position.x = dropbox_param[0]['position'][0]
+                    place_pose.position.y = dropbox_param[0]['position'][1]
                     place_pose.position.z = dropbox_param[0]['position'][2]
                 elif(object_group == dropbox_param[1]['group']):
                     # Assign the right arm to be used for pick_place
                     arm_name.data = dropbox_param[1]['name']
 
                     # Create the objects final resting position to be placed
-                    # TODO. better drop location tracking
-                    place_pose.position.x = dropbox_param[1]['position'][0]-0.03 - 0.05 * i
-                    place_pose.position.y = dropbox_param[1]['position'][1] - 0.06 * i
+                    # TODO.  drop location
+                    place_pose.position.x = dropbox_param[1]['position'][0]
+                    place_pose.position.y = dropbox_param[1]['position'][1]
                     place_pose.position.z = dropbox_param[1]['position'][2]
 
                 # make a dictionary of the robot and objects movement data
